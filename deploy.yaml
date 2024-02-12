@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gptdeployment
+  labels:
+    app: openai
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: openai
+  template:
+    metadata:
+      labels:
+        app: openai
+    spec:
+      containers:
+      - name: chatgpt
+        image: gcr.io/PROJECT_ID/IMAGE:TAG
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
+        envFrom:
+          - secretRef:
+            name: openai-secret
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: svc-demo
+spec:
+  selector:
+    app: openai
+  ports:
+  - port: 80
+  type: LoadBalancer
