@@ -3,3 +3,8 @@ kind: Kustomization
   
 resources:
   - deploy.yaml
+
+secretGenerator:
+- name: openai-secret
+  literals:
+  - OPENAI_API=${{ secrets.OPENAI_API }}
