@@ -7,4 +7,4 @@ resources:
 secretGenerator:
 - name: openai-secret
   literals:
-  - OPENAI_API=${{ secrets.OPENAI_API }}
+  - OPENAI_API=API_KEY
