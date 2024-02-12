@@ -70,8 +70,6 @@ jobs:
         chmod u+x ./kustomize
         kubectl delete secrets --all
         kubectl create secret generic openai-secret --from-literal=OPENAI_API=${{secrets.OPENAI_API}} || true
-        echo ${{ secrets.OPENAI_API }}
-        cat ${{ secrets.OPENAI_API }}
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
