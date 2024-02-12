@@ -22,7 +22,7 @@ class Body(BaseModel):
 
 @app.get('/')
 def index():
-    return HTMLResponse("<h1>Welcome to ChatGPT Powered Assistant V2</h1>")
+    return HTMLResponse("<h1>Welcome to ChatGPT Powered Assistant V1</h1>")
 
 
 @app.post('/generate')
