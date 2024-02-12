@@ -20,9 +20,12 @@ spec:
         imagePullPolicy: Always
         ports:
           - containerPort: 80
-        envFrom:
-          - secretRef:
-            name: openai-secret
+        env:
+          - name: OPENAI_API
+            valueFrom:
+              secretKeyRef:
+                name: openai-secret
+                key: OPENAI_API
 
 ---
 apiVersion: v1
