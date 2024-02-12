@@ -3,8 +3,3 @@ kind: Kustomization
   
 resources:
   - deploy.yaml
-
-secretGenerator:
-- name: openai-secret
-  literals:
-  - OPENAI_API=API_KEY
