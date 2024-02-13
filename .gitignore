@@ -1,2 +1,3 @@
 secrets.yaml
 app-deploy.yaml
+__pycache__/*
