@@ -1,1 +1,1 @@
-assistant_id = "asst_XH5D5DYQRPnihlx9LVMKGVzQ"
+assistant_id = "asst_ZZyqxeWN0AmryMAlZRaJlgiS"
