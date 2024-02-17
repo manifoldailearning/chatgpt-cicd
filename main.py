@@ -38,7 +38,7 @@ def predict(body: Body):
     run = client.beta.threads.runs.create(
         thread_id = thread.id,
         assistant_id=assistant_id,
-        instructions="Help the user on the event query"
+        instructions="Generate funny response"
     )
 
     while True:
